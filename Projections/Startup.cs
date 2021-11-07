@@ -62,11 +62,11 @@ namespace Projections
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseCors(AllowedOrigins);
+            app.UseHttpsRedirection();            
 
             app.UseRouting();
+
+            app.UseCors(AllowedOrigins);
 
             app.UseAuthorization();
 
