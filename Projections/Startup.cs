@@ -33,7 +33,7 @@ namespace Projections
                 options.AddPolicy(name: AllowedOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                                      builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().SetIsOriginAllowed(origin => true);
                                   });
             });
 
@@ -62,7 +62,7 @@ namespace Projections
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();            
+            //app.UseHttpsRedirection();            
 
             app.UseRouting();
 

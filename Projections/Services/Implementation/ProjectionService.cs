@@ -75,10 +75,10 @@ namespace Projections.Services.Implementation
                             element.Month = month.Value;
 
                             //
-                            var rows = new List<Row>();
-
+                            element.MonthData = new List<Row>();
+                            
                             //
-                            var actualsForCurrentMonthYear = new List<Actuals>();
+                            element.Actuals = new List<Actuals>();
 
                             result.Add(element);
                         }
